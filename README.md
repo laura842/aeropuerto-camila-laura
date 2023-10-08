@@ -2,7 +2,7 @@
 
 ### Realizado por Camila Caicedo y Laura Lozano
 
-![Aeropuerto Alfonso Bonilla Aragón|600](https://www.asecarga.org/wp-content/uploads/2021/10/Aeropuerto-Ernesto-Bonilla-Cali-1-2.jpg)
+![Aeropuerto Alfonso Bonilla Aragón|600](imagenes/portadaAeropuerto.jpg)
 
 Este sistema permite administrar diferentes aspectos del aeropuerto Alfonso Bonilla Aragón, incluyendo vuelos, pasajeros, tripulación, aeronaves y la disponibilidad de puertas de embarque. Este proyecto se ha realizado completamente en C++.
 
