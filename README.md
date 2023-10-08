@@ -2,7 +2,7 @@
 
 ### Realizado por Camila Caicedo y Laura Lozano
 
-![Aeropuerto Alfonso Bonilla Aragón|600](imagenes/portadaAeropuerto.jpg)
+![Aeropuerto Alfonso Bonilla Aragón|600](imagenes/portadaAeropuerto.jpeg)
 
 Este sistema permite administrar diferentes aspectos del aeropuerto Alfonso Bonilla Aragón, incluyendo vuelos, pasajeros, tripulación, aeronaves y la disponibilidad de puertas de embarque. Este proyecto se ha realizado completamente en C++.
 
