@@ -11,24 +11,24 @@ private:
     int numPuerta;
     string ubicacion;
     bool disponible;
-    Vuelo vueloActual;
-    vector<Vuelo> historial;
+    Vuelo* vueloActual;
+    vector<Vuelo*> historial;
 public:
     PuertaEmbarque();
     PuertaEmbarque(int numPuerta,string ubicacion, bool disponible);
-    void añadirHistorial(const Vuelo& historial1);
+    void añadirHistorial(Vuelo* historial1);
     // Métodos getters para atributos de PuertaEmbarque
-    int getNumPuerta() const;
-    string getUbicacion() const;
-    bool getDisponible() const;
-    vector<Vuelo> getHistorial() const;
-    Vuelo getVueloActual() const;
+    int getNumPuerta() ;
+    string getUbicacion() ;
+    bool getDisponible() ;
+    vector<Vuelo*> getHistorial() ;
+    Vuelo* getVueloActual() ;
 
     // Métodos setters para atributos de PuertaEmbarque
     void setNumPuerta(int numPuerta);
-    void setUbicacion(const string& ubicacion);
+    void setUbicacion( string& ubicacion);
     void setDisponible(bool disponible);
-    void setVueloActual(const Vuelo& vuelo);
+    void setVueloActual( Vuelo *vuelo);
 };
 
 

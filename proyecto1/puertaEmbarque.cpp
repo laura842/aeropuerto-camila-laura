@@ -6,29 +6,29 @@ PuertaEmbarque::PuertaEmbarque(int numPuerta, string ubicacion, bool disponible)
 }
 
 // Métodos getters para atributos de PuertaEmbarque
-Vuelo PuertaEmbarque::getVueloActual() const{
+Vuelo* PuertaEmbarque::getVueloActual() {
     return vueloActual;
 }
 
 
-int PuertaEmbarque::getNumPuerta() const {
+int PuertaEmbarque::getNumPuerta()  {
     return numPuerta;
 }
 
-string PuertaEmbarque::getUbicacion() const {
+string PuertaEmbarque::getUbicacion()  {
     return ubicacion;
 }
 
-bool PuertaEmbarque::getDisponible() const {
+bool PuertaEmbarque::getDisponible()  {
     return disponible;
 }
 
-vector<Vuelo> PuertaEmbarque::getHistorial() const {
+vector<Vuelo*> PuertaEmbarque::getHistorial()  {
     return historial;
 }
 
 // Métodos setters para atributos de PuertaEmbarque
-void PuertaEmbarque::setVueloActual(const Vuelo &vuelo){
+void PuertaEmbarque::setVueloActual( Vuelo *vuelo){
     this->vueloActual=vuelo;
 }
 
@@ -36,7 +36,7 @@ void PuertaEmbarque::setNumPuerta(int numPuerta) {
     this->numPuerta = numPuerta;
 }
 
-void PuertaEmbarque::setUbicacion(const string& ubicacion) {
+void PuertaEmbarque::setUbicacion( string& ubicacion) {
     this->ubicacion = ubicacion;
 }
 
@@ -44,6 +44,6 @@ void PuertaEmbarque::setDisponible(bool disponible) {
     this->disponible = disponible;
 }
 
-void PuertaEmbarque::añadirHistorial(const Vuelo& historial1) {
+void PuertaEmbarque::añadirHistorial(Vuelo* historial1) {
     historial.push_back(historial1);
 }

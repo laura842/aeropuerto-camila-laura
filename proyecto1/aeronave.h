@@ -19,36 +19,36 @@ class Aeronave{
     int fechaFab;
     string estado;
     bool totalAsign;
-    vector<Vuelo> vuelosAsign;
+    vector<Vuelo* > vuelosAsign;
     public:
     Aeronave();
-    Aeronave(string marca,string modelo,int capacidad,int velocidadMax,string autonomia,int fechaFab,string estado,bool totalAsign,vector<Vuelo> vuelosAsign);
+    Aeronave(string marca,string modelo,int capacidad,int velocidadMax,string autonomia,int fechaFab,string estado,bool totalAsign);
     void reportarUbicacion(string &mensaje);
     void despegar();
     void aterrizar();
     void recibido(string &mensaje);
     void añadirVuelo();
     // Métodos getters
-    string getId() const;
-    string getMarca() const;
-    string getModelo() const;
-    int getCapacidad() const;
-    int getVelocidadMax() const;
-    string getAutonomia() const;
-    int getFechaFab() const;
-    string getEstado() const;
-    bool getTotalAsign() const;
-    vector<Vuelo> getVuelosAsign() const;
+    string getId();
+    string getMarca();
+    string getModelo();
+    int getCapacidad();
+    int getVelocidadMax() ;
+    string getAutonomia() ;
+    int getFechaFab() ;
+    string getEstado() ;
+    bool getTotalAsign() ;
+    vector<Vuelo*> getVuelosAsign();
 
     // Métodos setters
-    void setId(const string& id);
-    void setMarca(const string& marca);
-    void setModelo(const string& modelo);
+    void setId( string& id);
+    void setMarca( string& marca);
+    void setModelo(string& modelo);
     void setCapacidad(int capacidad);
     void setVelocidadMax(int velocidadMax);
-    void setAutonomia(const string& autonomia);
+    void setAutonomia( string& autonomia);
     void setFechaFab(int fechaFab);
-    void setEstado(const string& estado);
+    void setEstado(string& estado);
     void setTotalAsign(bool totalAsign);
 };
 #endif

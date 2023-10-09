@@ -6,7 +6,9 @@
 #include "puertaEmbarque.h"
 #include "tripulacion.h"
 #include "aeronave.h"
+#include "torreDeControl.h"
 using namespace std;
+//class TorreDeControl;
 class Aeronave;
 class PuertaEmbarque;
 class Vuelo{
@@ -14,31 +16,31 @@ private:
     string id;
     string fecha;
     string origen;
-    Aeronave aeronaveAsign;
-    PuertaEmbarque puertaAsign;
+    Aeronave* aeronaveAsign;
+    PuertaEmbarque* puertaAsign;
     int sillasDisponibles;
-    vector<Tripulacion> tripAsignada;
+    vector<Tripulacion* > tripAsignada;
 
 public:
     Vuelo();
-    Vuelo(string id, string fecha,string origen, int sillasDisponibles,vector<Tripulacion> tripAsignada);
+    Vuelo(string id, string fecha,string origen, int sillasDisponibles,vector<Tripulacion*> tripAsignada);
     void Embarcar();
         // Métodos getters para atributos de Vuelo
-    string getId() const;
-    string getFecha() const;
-    string getOrigen() const;
-    Aeronave getAeronaveAsign() const;
-    PuertaEmbarque getPuertaAsign() const;
-    int getSillasDisponibles() const;
-    vector<Tripulacion> getTripAsignada() const;
+    string getId();
+    string getFecha();
+    string getOrigen();
+    Aeronave* getAeronaveAsign();
+    PuertaEmbarque* getPuertaAsign();
+    int getSillasDisponibles();
+    vector<Tripulacion*> getTripAsignada();
 
     // Métodos setters para atributos de Vuelo
-    void setId(const string& id);
-    void setFecha(const string& fecha);
-    void setOrigen(const string& origen);
-    void setAeronaveAsign(const Aeronave& aeronaveAsign);
-    void setPuertaAsign(const PuertaEmbarque& puertaAsign);
+    void setId(string& id);
+    void setFecha(string& fecha);
+    void setOrigen(string& origen);
+    void setAeronaveAsign(Aeronave* aeronaveAsign);
+    void setPuertaAsign(PuertaEmbarque* puertaAsign);
     void setSillasDisponibles(int sillasDisponibles);
-    void setTripAsignada(const vector<Tripulacion>& tripAsignada);
+    void setTripAsignada(vector<Tripulacion*> tripAsignada);
 };
 #endif

@@ -1,8 +1,8 @@
 #include "jetPrivado.h"
 
 // Constructor de JetPrivado
-JetPrivado::JetPrivado(string marca, string modelo, int capacidad, int velocidadMax, string autonomia, int fechaFab, string estado, bool totalAsign, vector<Vuelo> vuelosAsign, string propietario, vector<string> serviciosABordo, vector<string> destinosFrecuentes)
-    : Aeronave(marca, modelo, capacidad, velocidadMax, autonomia, fechaFab, estado, totalAsign, vuelosAsign) {
+JetPrivado::JetPrivado(string marca, string modelo, int capacidad, int velocidadMax, string autonomia, int fechaFab, string estado, bool totalAsign, string propietario, vector<string> serviciosABordo, vector<string> destinosFrecuentes)
+    : Aeronave(marca, modelo, capacidad, velocidadMax, autonomia, fechaFab, estado, totalAsign) {
     this->propietario = propietario;
     this->serviciosABordo = serviciosABordo;
     this->destinosFrecuentes = destinosFrecuentes;

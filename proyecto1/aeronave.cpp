@@ -1,5 +1,6 @@
 #include "aeronave.h"
-Aeronave::Aeronave(string marca, string modelo, int capacidad, int velocidadMax, string autonomia, int fechaFab, string estado, bool totalAsign, vector<Vuelo> vuelosAsign) {
+#include "torreDeControl.h"
+Aeronave::Aeronave(string marca, string modelo, int capacidad, int velocidadMax, string autonomia, int fechaFab, string estado, bool totalAsign) {
     this->marca = marca;
     this->modelo = modelo;
     this->capacidad = capacidad;
@@ -8,60 +9,59 @@ Aeronave::Aeronave(string marca, string modelo, int capacidad, int velocidadMax,
     this->fechaFab = fechaFab;
     this->estado = estado;
     this->totalAsign = totalAsign;
-    this->vuelosAsign = vuelosAsign;
 }
 
 // Métodos getters
-string Aeronave::getId() const {
+string Aeronave::getId()  {
     return id;
 }
 
-string Aeronave::getMarca() const {
+string Aeronave::getMarca()  {
     return marca;
 }
 
-string Aeronave::getModelo() const {
+string Aeronave::getModelo()  {
     return modelo;
 }
 
-int Aeronave::getCapacidad() const {
+int Aeronave::getCapacidad()  {
     return capacidad;
 }
 
-int Aeronave::getVelocidadMax() const {
+int Aeronave::getVelocidadMax()  {
     return velocidadMax;
 }
 
-string Aeronave::getAutonomia() const {
+string Aeronave::getAutonomia()  {
     return autonomia;
 }
 
-int Aeronave::getFechaFab() const {
+int Aeronave::getFechaFab()  {
     return fechaFab;
 }
 
-string Aeronave::getEstado() const {
+string Aeronave::getEstado()  {
     return estado;
 }
 
-bool Aeronave::getTotalAsign() const {
+bool Aeronave::getTotalAsign()  {
     return totalAsign;
 }
 
-vector<Vuelo> Aeronave::getVuelosAsign() const {
+vector<Vuelo*> Aeronave::getVuelosAsign()  {
     return vuelosAsign;
 }
 
 // Métodos setters
-void Aeronave::setId(const string& id) {
+void Aeronave::setId( string& id) {
     this->id = id;
 }
 
-void Aeronave::setMarca(const string& marca) {
+void Aeronave::setMarca( string& marca) {
     this->marca = marca;
 }
 
-void Aeronave::setModelo(const string& modelo) {
+void Aeronave::setModelo( string& modelo) {
     this->modelo = modelo;
 }
 
@@ -73,7 +73,7 @@ void Aeronave::setVelocidadMax(int velocidadMax) {
     this->velocidadMax = velocidadMax;
 }
 
-void Aeronave::setAutonomia(const string& autonomia) {
+void Aeronave::setAutonomia( string& autonomia) {
     this->autonomia = autonomia;
 }
 
@@ -81,7 +81,7 @@ void Aeronave::setFechaFab(int fechaFab) {
     this->fechaFab = fechaFab;
 }
 
-void Aeronave::setEstado(const string& estado) {
+void Aeronave::setEstado( string& estado) {
     this->estado = estado;
 }
 
@@ -94,7 +94,7 @@ void Aeronave::despegar(){
 }
 
 void Aeronave::recibido(string &mensaje){
-    cout<<"La aeronave"<<id<<"ha recibido el siguiente mensaje:"<<mensaje<<endl;
+    cout<<"La aeronave "<<id<<" ha recibido el siguiente mensaje: "<<mensaje<<endl;
 }
 
 void Aeronave::aterrizar(){

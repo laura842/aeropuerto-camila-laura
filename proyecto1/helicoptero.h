@@ -13,7 +13,7 @@ class Helicoptero : public Aeronave{
     string usoEspecifico;
     public:
     Helicoptero();
-    Helicoptero(string marca,string modelo,int capacidad,int velocidadMax,string autonomia,int fechaFab,string estado,bool totalAsign,vector<Vuelo> vuelosAsign,int rotores, int capElevacion, string usoEspecifico);
+    Helicoptero(string marca,string modelo,int capacidad,int velocidadMax,string autonomia,int fechaFab,string estado,bool totalAsign,int rotores, int capElevacion, string usoEspecifico);
     // Métodos getters para atributos de Helicoptero
     int getRotores() const;
     int getCapElevacion() const;
