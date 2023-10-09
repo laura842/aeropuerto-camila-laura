@@ -1,0 +1,14 @@
+# ninja log v5
+8	136	7185895834272502	CMakeFiles/proyecto1.dir/aeropuerto.cpp.obj	9037c74b5b677737
+38	766	7185895840590510	CMakeFiles/proyecto1.dir/pasajero.cpp.obj	f1ccdc0e366a495b
+93	797	7185895840913145	CMakeFiles/proyecto1.dir/tripulacion.cpp.obj	2bdb921e9f03545c
+14	803	7185895840976705	CMakeFiles/proyecto1.dir/helicoptero.cpp.obj	c75c499a587f59c3
+48	818	7185895841123245	CMakeFiles/proyecto1.dir/persona.cpp.obj	d5a6fc9ed061fc57
+29	841	7185895841350461	CMakeFiles/proyecto1.dir/avion.cpp.obj	2fc1fa55fe25e85
+0	904	7185895841999459	CMakeFiles/proyecto1.dir/aeronave.cpp.obj	87c53ffe2640b99
+57	921	7185895842168181	CMakeFiles/proyecto1.dir/main.cpp.obj	dd102496a5f733e8
+21	953	7185895842501631	CMakeFiles/proyecto1.dir/jetPrivado.cpp.obj	16a2968f42cad53a
+68	969	7185895842651669	CMakeFiles/proyecto1.dir/torreDeControl.cpp.obj	eb39c6077d4326f2
+80	970	7185895842651669	CMakeFiles/proyecto1.dir/puertaEmbarque.cpp.obj	4cabe28a95158319
+104	980	7185895842756965	CMakeFiles/proyecto1.dir/vuelo.cpp.obj	ebd82cab4808bdf4
+981	1177	7185895844685975	proyecto1.exe	560123d2839519d5

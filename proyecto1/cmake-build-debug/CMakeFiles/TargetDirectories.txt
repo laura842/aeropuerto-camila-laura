@@ -1,0 +1,3 @@
+C:/Users/lauri/OneDrive/Documentos/Javeriana/proyecto1POOf/aeropuerto-camila-laura/proyecto1/cmake-build-debug/CMakeFiles/proyecto1.dir
+C:/Users/lauri/OneDrive/Documentos/Javeriana/proyecto1POOf/aeropuerto-camila-laura/proyecto1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/lauri/OneDrive/Documentos/Javeriana/proyecto1POOf/aeropuerto-camila-laura/proyecto1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
