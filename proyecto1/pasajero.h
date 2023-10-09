@@ -1,10 +1,10 @@
+#ifndef PASAJERO_H
+#define PASAJERO_H
 #include <iostream>
 #include <vector>
 #include <string>
 #include "persona.h"
 using namespace std;
-#ifndef PASAJERO_H
-#define PASAJERO_H
 class  Pasajero: public Persona{
     private:
         string nacionalidad;
@@ -13,6 +13,16 @@ class  Pasajero: public Persona{
 
     public:
         Pasajero(string cedula,string nombre,string apellido,string fechaNacimiento,string genero,string direccion,string telefono,string correo, string nacionalidad,int maletas, string infoMedica);
+        
+        // Métodos getters para atributos de Pasajero
+        string getNacionalidad() const;
+        int getMaletas() const;
+        string getInfoMedica() const;
+
+        // Métodos setters para atributos de Pasajero
+        void setNacionalidad(const string& nacionalidad);
+        void setMaletas(int maletas);
+        void setInfoMedica(const string& infoMedica);
 };
 
 #endif
