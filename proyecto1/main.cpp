@@ -41,5 +41,56 @@ int main(){
     (*A1).reportarUbicacion(Ub);
     cout<<"-------------------"<<endl;
     cout<<(*((*V1).getPuertaAsign())).getNumPuerta()<<endl;
+
+    int opcion = 0;
+
+    while (opcion != 7) {
+        std::cout << "Menu:" << std::endl;
+        std::cout << "1. Consultar informacion sobre alguna de nuestras aeronaves" << std::endl;
+        std::cout << "2. Modificar informacion sobre alguna de nuestras aeronaves" << std::endl;
+        std::cout << "3. Registrar un vuelo" << std::endl;
+        std::cout << "4. Ver vuelos disponibles (con posibilidad de comprar)" << std::endl;
+        std::cout << "5. Ver las puertas de embarque" << std::endl;
+        std::cout << "6. Ver el historial de vuelos" << std::endl;
+        std::cout << "7. Salir" << std::endl;
+
+        std::cout << "Seleccione una opcion: ";
+        std::cin >> opcion;
+
+        switch (opcion) {
+            case 1:
+                std::cout << "Selecciono la Opcion 1." << std::endl;
+                // Aquí puedes agregar la lógica para la Opción 1
+                break;
+            case 2:
+                std::cout << "Selecciono la Opcion 2." << std::endl;
+                // Aquí puedes agregar la lógica para la Opción 2
+                break;
+            case 3:
+                std::cout << "Selecciono la Opcion 3." << std::endl;
+                // Aquí puedes agregar la lógica para la Opción 3
+                break;
+            case 4:
+                std::cout << "Selecciono la Opcion 4." << std::endl;
+                // Aquí puedes agregar la lógica para la Opción 3
+                break;
+            case 5:
+                std::cout << "Selecciono la Opcion 5." << std::endl;
+                // Aquí puedes agregar la lógica para la Opción 3
+                break;
+            case 6:
+                std::cout << "Selecciono la Opcion 6." << std::endl;
+                // Aquí puedes agregar la lógica para la Opción 3
+                break;
+            case 7:
+                std::cout << "Saliendo del programa." << std::endl;
+                return 0;  // Salir del programa
+            default:
+                std::cout << "Opcion no valida. Por favor, seleccione una opcion valida." << std::endl;
+        }
+    }
+
+
+
     return 0;
 }
