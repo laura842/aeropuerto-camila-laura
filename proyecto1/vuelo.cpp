@@ -1,28 +1,28 @@
 #include "vuelo.h"
 #include "torreDeControl.h"
 #include "puertaEmbarque.h"
-// Constructor de Vuelo
-Vuelo::Vuelo(string id, string fecha, string origen,string destino,int sillasDisponibles,vector<Tripulacion*> tripAsignada){
+
+// Constructor de la clase Vuelo
+Vuelo::Vuelo(string id, string fecha, string origen, string destino, int sillasDisponibles, vector<Tripulacion*> tripAsignada) {
     this->id = id;
     this->fecha = fecha;
     this->origen = origen;
     this->destino = destino;
-   // this->aeronaveAsign = aeronaveAsign;
-    this->sillasDisponibles = sillasDisponibles; 
+    this->sillasDisponibles = sillasDisponibles;
     this->tripAsignada = tripAsignada;
 }
-Vuelo::Vuelo(){
+
+// Constructor predeterminado de la clase Vuelo
+Vuelo::Vuelo() {
     this->id = "1";
     this->fecha = "9/10/23";
     this->origen = "cali";
     this->destino = "Bog";
-   // this->aeronaveAsign = aeronaveAsign;
-    this->sillasDisponibles = 40; 
-   // this->tripAsignada = NULL; 
+    this->sillasDisponibles = 40;
 }
 
-// Métodos getters para atributos de Vuelo
-string Vuelo::getId(){
+// Métodos getters (obtenedores) para los atributos de Vuelo
+string Vuelo::getId() {
     return id;
 }
 
@@ -30,35 +30,35 @@ string Vuelo::getFecha() {
     return fecha;
 }
 
-string Vuelo::getOrigen(){
+string Vuelo::getOrigen() {
     return origen;
 }
 
-string Vuelo::getDestino(){
+string Vuelo::getDestino() {
     return destino;
 }
 
-Aeronave* Vuelo::getAeronaveAsign(){
+Aeronave* Vuelo::getAeronaveAsign() {
     return aeronaveAsign;
 }
 
-PuertaEmbarque* Vuelo::getPuertaAsign(){
+PuertaEmbarque* Vuelo::getPuertaAsign() {
     return puertaAsign;
 }
 
-int Vuelo::getSillasDisponibles(){
+int Vuelo::getSillasDisponibles() {
     return sillasDisponibles;
 }
 
-vector<Tripulacion*> Vuelo::getTripAsignada(){
+vector<Tripulacion*> Vuelo::getTripAsignada() {
     return tripAsignada;
 }
 
-vector<Pasajero*> Vuelo::getPasajerosVuelo(){
+vector<Pasajero*> Vuelo::getPasajerosVuelo() {
     return pasajerosVuelo;
 }
 
-// Métodos setters para atributos de Vuelo
+// Métodos setters (establecedores) para los atributos de Vuelo
 void Vuelo::setId(string& id) {
     this->id = id;
 }
@@ -91,10 +91,12 @@ void Vuelo::setTripAsignada(vector<Tripulacion*> tripAsignada) {
     this->tripAsignada = tripAsignada;
 }
 
-void Vuelo::Embarcar(){
+// Método para asignar una puerta de embarque a un vuelo
+void Vuelo::Embarcar() {
     TorreDeControl::getInstancia().asignarPuerta(this);
 }
 
-void Vuelo::anadirPasajero(Pasajero* P){
+// Método para agregar un pasajero al vuelo
+void Vuelo::anadirPasajero(Pasajero* P) {
     pasajerosVuelo.push_back(P);
 }

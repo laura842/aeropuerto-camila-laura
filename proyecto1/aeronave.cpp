@@ -1,8 +1,9 @@
 #include "aeronave.h"
 #include "torreDeControl.h"
+// Constructor de la clase Aeronave
 Aeronave::Aeronave(string marca, string id, string modelo, int capacidad, int velocidadMax, string autonomia, int fechaFab, string estado, bool totalAsign) {
     this->marca = marca;
-    this->id=id;
+    this->id = id;
     this->modelo = modelo;
     this->capacidad = capacidad;
     this->velocidadMax = velocidadMax;
@@ -12,7 +13,7 @@ Aeronave::Aeronave(string marca, string id, string modelo, int capacidad, int ve
     this->totalAsign = totalAsign;
 }
 
-// Métodos getters
+// Métodos getters (obtenedores) para las propiedades de la aeronave
 string Aeronave::getId()  {
     return id;
 }
@@ -53,7 +54,7 @@ vector<Vuelo*> Aeronave::getVuelosAsign()  {
     return vuelosAsign;
 }
 
-// Métodos setters
+// Métodos setters (establecedores) para las propiedades de la aeronave
 void Aeronave::setId( string& id) {
     this->id = id;
 }
@@ -90,31 +91,36 @@ void Aeronave::setTotalAsign(bool totalAsign) {
     this->totalAsign = totalAsign;
 }
 
+// Método para notificar despegue a la Torre de Control
 void Aeronave::despegar(){
     TorreDeControl::getInstancia().aeronaveDespega(this);
 }
 
+// Método para imprimir un mensaje recibido por la aeronave
 void Aeronave::recibido(string &mensaje){
-    cout<<"La aeronave "<<id<<" ha recibido el siguiente mensaje: "<<mensaje<<endl;
+    cout << "La aeronave " << id << " ha recibido el siguiente mensaje: " << mensaje << endl;
 }
 
+// Método para notificar aterrizaje a la Torre de Control
 void Aeronave::aterrizar(){
     TorreDeControl::getInstancia().aeronaveAterriza(this);
 }
 
+// Método para informar ubicación a la Torre de Control
 void Aeronave::reportarUbicacion(string &mensaje){
-    TorreDeControl::getInstancia().aeronaveComparte(this,mensaje);
+    TorreDeControl::getInstancia().aeronaveComparte(this, mensaje);
 }
 
+// Método para agregar un vuelo a la lista de vuelos asignados a la aeronave
 void Aeronave::anadirVuelo(Vuelo* V){
-    if (totalAsign==false){
+    if (totalAsign == false){
         vuelosAsign.push_back(V);
-        if (vuelosAsign.size()==3){
-            totalAsign=true;
+        if (vuelosAsign.size() == 3){
+            totalAsign = true;
         }
-        cout<<"Vuelo asignado correctamente"<<endl;
+        cout << "Vuelo asignado correctamente" << endl;
     }
     else{
-        cout<<"No es posible asignar mas vuelos a esta aeronave"<<endl;
+        cout << "No es posible asignar más vuelos a esta aeronave" << endl;
     }
 }
