@@ -8,6 +8,18 @@ vector<Aeronave*>& Aeropuerto::getAeronavesdisp() {
     return aeronavesdisp;
 }
 
+vector<Avion*>& Aeropuerto::getAvionesdisp() {
+    return avionesDisp;
+}
+
+vector<Helicoptero*>& Aeropuerto::getHelicopterosdisp() {
+    return helicopterosDisp;
+}
+
+vector<JetPrivado*>& Aeropuerto::getJetsdisp() {
+    return jetsDisp;
+}
+
 vector<Vuelo*>& Aeropuerto::getVuelosDisp() {
     return vuelosDisp;
 }
@@ -31,6 +43,18 @@ void Aeropuerto::setPuertasDisponibles(vector<PuertaEmbarque*>& puertasDisponibl
 
 void Aeropuerto:: anadirAeronave (Aeronave* A){
     aeronavesdisp.push_back(A);
+}
+
+void Aeropuerto:: anadirAvion (Avion* A){
+    avionesDisp.push_back(A);
+}
+
+void Aeropuerto:: anadirHelicoptero (Helicoptero* H){
+    helicopterosDisp.push_back(H);
+}
+
+void Aeropuerto:: anadirJet (JetPrivado* J){
+    aeronavesdisp.push_back(J);
 }
 
 void Aeropuerto::anadirVuelo (Vuelo* V){
