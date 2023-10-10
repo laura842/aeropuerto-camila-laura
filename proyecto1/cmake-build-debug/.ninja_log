@@ -55,3 +55,14 @@
 853	1196	7186066681643490	proyecto1.exe	560123d2839519d5
 4	706	7186077269355390	CMakeFiles/proyecto1.dir/main.cpp.obj	dd102496a5f733e8
 708	1036	7186077272586861	proyecto1.exe	560123d2839519d5
+26	1688	7186151925654118	CMakeFiles/proyecto1.dir/avion.cpp.obj	2fc1fa55fe25e85
+36	1738	7186151926160133	CMakeFiles/proyecto1.dir/helicoptero.cpp.obj	c75c499a587f59c3
+85	1880	7186151927590278	CMakeFiles/proyecto1.dir/pasajero.cpp.obj	f1ccdc0e366a495b
+103	1986	7186151928650142	CMakeFiles/proyecto1.dir/puertaEmbarque.cpp.obj	4cabe28a95158319
+50	2030	7186151929142813	CMakeFiles/proyecto1.dir/jetPrivado.cpp.obj	16a2968f42cad53a
+6	2042	7186151929278529	CMakeFiles/proyecto1.dir/aeronave.cpp.obj	87c53ffe2640b99
+120	2093	7186151929814573	CMakeFiles/proyecto1.dir/torreDeControl.cpp.obj	eb39c6077d4326f2
+140	2186	7186151930750791	CMakeFiles/proyecto1.dir/vuelo.cpp.obj	ebd82cab4808bdf4
+17	2295	7186151931850767	CMakeFiles/proyecto1.dir/aeropuerto.cpp.obj	9037c74b5b677737
+69	2413	7186151933040923	CMakeFiles/proyecto1.dir/main.cpp.obj	dd102496a5f733e8
+2414	2811	7186151936942380	proyecto1.exe	560123d2839519d5

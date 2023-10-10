@@ -1,7 +1,7 @@
 #include "avion.h"
 
-Avion::Avion(string marca, string modelo, int capacidad, int velocidadMax, string autonomia, int fechaFab, string estado, bool totalAsign, int altitudMax, int motores, string categoria)
-    : Aeronave(marca, modelo, capacidad, velocidadMax, autonomia, fechaFab, estado, totalAsign) {
+Avion::Avion(string marca, string id, string modelo, int capacidad, int velocidadMax, string autonomia, int fechaFab, string estado, bool totalAsign, int altitudMax, int motores, string categoria)
+    : Aeronave(marca,id , modelo, capacidad, velocidadMax, autonomia, fechaFab, estado, totalAsign) {
     this->altitudMax = altitudMax;
     this->motores = motores;
     this->categoria = categoria;

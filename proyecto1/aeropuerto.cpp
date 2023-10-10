@@ -45,7 +45,7 @@ void Aeropuerto::verVuelos (string fecha1, string origen, string destino){
     int contador = 0;
     for(int i=0;i<vuelosDisp.size();i++){
         if (vuelosDisp[i]->getOrigen()==origen and vuelosDisp[i]->getDestino()==destino and vuelosDisp[i]->getFecha()==fecha1){
-            cout<<"El vuelo "<<vuelosDisp[i]->getId()<<" se encuentra disponible"<<endl;
+            cout<<"El vuelo "<<vuelosDisp[i]->getId()<<" se encuentra disponible en la fecha "<<fecha1<<"con destino a "<<destino<<endl;
             contador++;
         }
     }
@@ -60,6 +60,7 @@ void Aeropuerto::reservarVuelo(string id,Pasajero* P){
         if (vuelosDisp[i]->getId()==id){
             if (vuelosDisp[i]->getSillasDisponibles()>0){
                 vuelosDisp[i]->anadirPasajero(P);
+                cout<<"Vuelo reservado correctamente"<<endl;
             }
             else {
                 cout<<"No hay sillas disponibles para el vuelo "<<id<<endl;

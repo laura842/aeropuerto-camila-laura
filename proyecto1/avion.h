@@ -12,7 +12,7 @@ class Avion : public Aeronave{
     string categoria;
     public:
     Avion();
-    Avion(string marca,string modelo,int capacidad,int velocidadMax,string autonomia,int fechaFab,string estado,bool totalAsign,int altitudMax, int motores, string categoria);
+    Avion(string marca,string id, string modelo,int capacidad,int velocidadMax,string autonomia,int fechaFab,string estado,bool totalAsign,int altitudMax, int motores, string categoria);
     // Métodos getters para atributos de Avion
     int getAltitudMax() const;
     int getMotores() const;

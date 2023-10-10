@@ -13,7 +13,7 @@ class  Pasajero: public Persona{
         string infoMedica;
 
     public:
-        Pasajero Pasajero();
+        Pasajero(string cedula,string nombre,string apellido,string fechaNacimiento,string genero,string direccion,string telefono,string correo, string nacionalidad,int maletas, string infoMedica);
         void verVuelos(string fecha1,string origen,string destino);
         // Métodos getters para atributos de Pasajero
         string getNacionalidad() const;

@@ -1,8 +1,8 @@
 #include "helicoptero.h"
 
 // Constructor de Helicoptero
-Helicoptero::Helicoptero(string marca, string modelo, int capacidad, int velocidadMax, string autonomia, int fechaFab, string estado, bool totalAsign, int rotores, int capElevacion, string usoEspecifico)
-    : Aeronave(marca, modelo, capacidad, velocidadMax, autonomia, fechaFab, estado, totalAsign) {
+Helicoptero::Helicoptero(string marca, string id, string modelo, int capacidad, int velocidadMax, string autonomia, int fechaFab, string estado, bool totalAsign, int rotores, int capElevacion, string usoEspecifico)
+    : Aeronave(marca, id, modelo, capacidad, velocidadMax, autonomia, fechaFab, estado, totalAsign) {
     this->rotores = rotores;
     this->capElevacion = capElevacion;
     this->usoEspecifico = usoEspecifico;
