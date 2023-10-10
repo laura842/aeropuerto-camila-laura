@@ -73,9 +73,8 @@ int main(){
 
     int contrasena = 1234;
     int opcion = 0;
-
+    cout << "Bienvenido/a al aeropuerto internacional Alfonso Bonilla Aragon" << endl;
     while (opcion != 6) {
-        cout << "Bienvenido/a al aeropuerto internacional Alfonso Bonilla Aragon" << endl;
         cout << "Menu:" << endl;
         cout << "1. Consultar informacion sobre nuestras aeronaves" << endl;
         cout << "2. Ver las puertas de embarque" << endl;
@@ -376,11 +375,43 @@ int main(){
 
                             case 3:{
                                 cout << "Ingrese los datos del vuelo que va a registrar" << endl;
+                                string idV;
+                                string fechaV;
+                                string origenV;
+                                string destinoV;
+                                Aeronave* aeronaveAsignV;
+                                PuertaEmbarque* puertaAsignV;
+                                int sillasDisponiblesV;
+                                vector<Tripulacion* > tripAsignadaV;
+                                vector<Pasajero* > pasajerosVueloV;
+
+                                cout << "Ingrese el ID del vuelo: " << endl;
+                                cin >> idV;
+                                cout << "Ingrese la fecha: " << endl;
+                                cin >> fechaV;
+                                cout << "Ingrese el origen: " << endl;
+                                cin >> origenV;
+                                cout << "Ingrese el destino: " << endl;
+                                cin >> destinoV;
+                                cout << "Ingrese las sillas disponibles: " << endl;
+                                cin >> sillasDisponiblesV;
+
+                                Vuelo* nuevoVuelo = new Vuelo(idV, fechaV, origenV, destinoV, sillasDisponiblesV, tripAsignadaV);
+
                                 break;
                             }
 
                             case 4:{
                                 cout << "Ingrese los datos de la puerta de embarque que va a registrar" << endl;
+                                int numPuertaP;
+                                string ubicacionP;
+
+                                cout << "Ingrese el numero de la puerta: " << endl;
+                                cin >> numPuertaP;
+                                cout << "Ingrese la ubicacion de la puerta: " << endl;
+                                cin >> ubicacionP;
+
+                                PuertaEmbarque* P1 = new PuertaEmbarque(numPuertaP, ubicacionP, true);
                                 break;
                             }
 
