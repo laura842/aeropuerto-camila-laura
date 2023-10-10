@@ -104,3 +104,16 @@ void Aeronave::aterrizar(){
 void Aeronave::reportarUbicacion(string &mensaje){
     TorreDeControl::getInstancia().aeronaveComparte(this,mensaje);
 }
+
+void Aeronave::anadirVuelo(Vuelo* V){
+    if (totalAsign==false){
+        vuelosAsign.push_back(V);
+        if (vuelosAsign.size()==3){
+            totalAsign=true;
+        }
+        cout<<"Vuelo asignado correctamente"<<endl;
+    }
+    else{
+        cout<<"No es posible asignar mas vuelos a esta aeronave"<<endl;
+    }
+}

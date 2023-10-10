@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include "persona.h"
+#include "aeropuerto.h"
 using namespace std;
 class  Pasajero: public Persona{
     private:
@@ -13,7 +14,7 @@ class  Pasajero: public Persona{
 
     public:
         Pasajero(string cedula,string nombre,string apellido,string fechaNacimiento,string genero,string direccion,string telefono,string correo, string nacionalidad,int maletas, string infoMedica);
-        
+        void verVuelos(string fecha1,string origen,string destino);
         // Métodos getters para atributos de Pasajero
         string getNacionalidad() const;
         int getMaletas() const;

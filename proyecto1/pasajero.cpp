@@ -32,3 +32,7 @@ void Pasajero::setMaletas(int maletas) {
 void Pasajero::setInfoMedica(const string& infoMedica) {
     this->infoMedica = infoMedica;
 }
+
+void Pasajero::verVuelos(string fecha1,string origen,string destino){
+    Aeropuerto::getInstancia().verVuelos(fecha1,origen,destino);
+}

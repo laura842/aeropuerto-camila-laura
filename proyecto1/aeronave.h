@@ -27,7 +27,7 @@ class Aeronave{
     void despegar();
     void aterrizar();
     void recibido(string &mensaje);
-    void añadirVuelo();
+    void anadirVuelo(Vuelo* V);
     // Métodos getters
     string getId();
     string getMarca();
