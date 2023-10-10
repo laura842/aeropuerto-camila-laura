@@ -8,18 +8,6 @@ vector<Aeronave*>& Aeropuerto::getAeronavesdisp() {
     return aeronavesdisp;
 }
 
-vector<Avion*>& Aeropuerto::getAvionesdisp() {
-    return avionesDisp;
-}
-
-vector<Helicoptero*>& Aeropuerto::getHelicopterosdisp() {
-    return helicopterosDisp;
-}
-
-vector<JetPrivado*>& Aeropuerto::getJetsdisp() {
-    return jetsDisp;
-}
-
 vector<Vuelo*>& Aeropuerto::getVuelosDisp() {
     return vuelosDisp;
 }
@@ -45,18 +33,6 @@ void Aeropuerto:: anadirAeronave (Aeronave* A){
     aeronavesdisp.push_back(A);
 }
 
-void Aeropuerto:: anadirAvion (Avion* A){
-    avionesDisp.push_back(A);
-}
-
-void Aeropuerto:: anadirHelicoptero (Helicoptero* H){
-    helicopterosDisp.push_back(H);
-}
-
-void Aeropuerto:: anadirJet (JetPrivado* J){
-    aeronavesdisp.push_back(J);
-}
-
 void Aeropuerto::anadirVuelo (Vuelo* V){
     vuelosDisp.push_back(V);
 }
@@ -69,7 +45,7 @@ void Aeropuerto::verVuelos (string fecha1, string origen, string destino){
     int contador = 0;
     for(int i=0;i<vuelosDisp.size();i++){
         if (vuelosDisp[i]->getOrigen()==origen and vuelosDisp[i]->getDestino()==destino and vuelosDisp[i]->getFecha()==fecha1){
-            cout<<"El vuelo "<<vuelosDisp[i]->getId()<<" se encuentra disponible"<<endl;
+            cout<<"El vuelo "<<vuelosDisp[i]->getId()<<" se encuentra disponible en la fecha "<<fecha1<<"con destino a "<<destino<<endl;
             contador++;
         }
     }
@@ -84,6 +60,7 @@ void Aeropuerto::reservarVuelo(string id,Pasajero* P){
         if (vuelosDisp[i]->getId()==id){
             if (vuelosDisp[i]->getSillasDisponibles()>0){
                 vuelosDisp[i]->anadirPasajero(P);
+                cout<<"Vuelo reservado correctamente"<<endl;
             }
             else {
                 cout<<"No hay sillas disponibles para el vuelo "<<id<<endl;

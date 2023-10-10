@@ -22,7 +22,7 @@ class Aeronave{
     vector<Vuelo* > vuelosAsign;
     public:
     Aeronave();
-    Aeronave(string marca,string modelo,int capacidad,int velocidadMax,string autonomia,int fechaFab,string estado,bool totalAsign);
+    Aeronave(string marca, string id, string modelo,int capacidad,int velocidadMax,string autonomia,int fechaFab,string estado,bool totalAsign);
     void reportarUbicacion(string &mensaje);
     void despegar();
     void aterrizar();

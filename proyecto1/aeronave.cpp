@@ -1,7 +1,8 @@
 #include "aeronave.h"
 #include "torreDeControl.h"
-Aeronave::Aeronave(string marca, string modelo, int capacidad, int velocidadMax, string autonomia, int fechaFab, string estado, bool totalAsign) {
+Aeronave::Aeronave(string marca, string id, string modelo, int capacidad, int velocidadMax, string autonomia, int fechaFab, string estado, bool totalAsign) {
     this->marca = marca;
+    this->id=id;
     this->modelo = modelo;
     this->capacidad = capacidad;
     this->velocidadMax = velocidadMax;
